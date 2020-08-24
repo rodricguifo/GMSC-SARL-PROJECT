@@ -1,0 +1,707 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+	<!-- Header -->
+	<header class="header" >
+		<!-- Topbar -->
+		<div class="topbar" id="home">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-12">
+						<!-- Top Contact -->
+						<div class="top-contact">
+							<div class="single-contact"><i class="fa fa-phone"></i>Tel: +(237) 233 47 88 14</div>
+							<div class="single-contact"><i class="fa fa-envelope-open"></i>Email: gmscsarl@yahoo.com</div>
+							<div class="single-contact"><i class="fa fa-clock-o"></i>Ouverture: 08h - 17h</div>
+							<div class="single-contact"><a href="https://www.google.com/maps/place/4%C2%B005'25.0%22N+9%C2%B044'47.6%22E/@4.0902831,9.7443669,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d4.090272!4d9.746553"><i class="fa fa-map-marker"></i>ICI</a></div>
+						</div>
+						<!-- End Top Contact -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<div class="topbar-right">
+							<!-- Social Icons -->
+							<ul class="social-icons">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+							<div class="single-contact">
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									<i class="fa fa-user" style="color:#ffffff;"></i>Mon Compte
+								</button>
+							</div>
+							<!-- The Modal -->
+							<div class="modal" id="myModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">Mon Compte</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<form class="modal-content animate" action="/action_page.php" method="post">
+												<div class="imgcontainer">
+
+													<img src="{{ asset('img/img_avatar2.png')}}" alt="Avatar" class="avatar">
+												</div>
+												<div class="container">
+													<label for="uname"><b>Username</b></label>
+													<input type="text" placeholder="Enter Username" name="uname" required>
+
+													<label for="psw"><b>Password</b></label>
+													<input type="password" placeholder="Enter Password" name="psw" required>
+
+													<button type="submit" id="me">Login</button>
+												</div>
+												<div class="container" style="background-color:#f1f1f1">
+													<span class="psw"><a href="#">Mot de passe oubli&eacute?</a></span>
+												</div>
+											</form>
+											<script>
+												// Get the modal
+												var modal = document.getElementById('myModal');
+
+												// When the user clicks anywhere outside of the modal, close it
+												window.onclick = function(event) {
+													if (event.target == modal) {
+														modal.style.display = "none";
+													}
+												}
+											</script>
+										</div>
+
+										<!-- Modal footer -->
+										<div class="modal-footer">
+											<span class="psw" ><a href="{{ asset('inscrit.html')}}" >S'inscrire?</a></span>
+											<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Topbar -->
+		<!-- Middle Header -->
+		<div class="middle-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="middle-inner">
+							<div class="row">
+								<div class="col-lg-2 col-md-3 col-12">
+									<!-- Logo -->
+									<div class="logo">
+										<!-- Image Logo -->
+										<div class="img-logo">
+											<a href="#home">
+												<img src="{{ asset('img/b.png')}}" alt="#">
+											</a>
+											<a href="{{ asset('index.html')}}">
+												<img src="{{ asset('img/a.png')}}" alt="#">
+											</a>
+										</div>
+									</div>
+									<div class="mobile-nav"></div>
+								</div>
+								<div class="col-lg-10 col-md-9 col-12">
+									<div class="menu-area">
+										<!-- Main Menu -->
+										<nav class="navbar navbar-expand-lg">
+											<div class="navbar-collapse">
+												<div class="nav-inner">
+													<div class="menu-home-menu-container">
+														<!-- Naviagiton -->
+														<ul id="nav" class="nav main-menu menu navbar-nav">
+															<li><a href="#home"><span class="fa fa-home"></span></a></li>
+															<li class="icon-active"><a href="#service">Nos Services</a>
+																<ul class="sub-menu">
+																	<li><a href="#service">Assistance comptable, Fiscale, Douani&egravere et Financi&egravere</a></li>
+																	<li><a href="#service">Conception des logiciels et progiciels de gestion</a></li>
+																	<li><a href="#service">Montage des projets</a></li>
+																	<li><a href="#service">Formation en gestion et en informatique </a></li>
+																</ul>
+															</li>
+															<li class="icon-active"><a href="#">A propos De Nous</a>
+																<ul class="sub-menu">
+																	<li><a href="#equipe">Notre Equipe</a></li>
+																	<li><a href="portfolio.html">Notre Portefeuille</a></li>
+																</ul>
+															</li>
+															<li><a href="#temoin">T&eacutemoignage</a></li>
+															<li><a href="#contact">Contactez Nous</a></li>
+														</ul>
+														<!--/ End Naviagiton -->
+													</div>
+												</div>
+											</div>
+										</nav>
+										<!--/ End Main Menu -->
+										<!-- Right Bar -->
+										<div class="right-bar">
+											<!-- Search Bar -->
+											<ul class="right-nav">
+												<li class="top-search"><a href="#0"><i class="fa fa-search"></i></a></li>
+												<!--<li class="bar"><a class="fa fa-bars"></a></li>-->
+											</ul>
+											<!--/ End Search Bar -->
+											<!-- Search Form -->
+											<div class="search-top">
+												<form action="#" class="search-form" method="get">
+													<input type="text" name="s" value="" placeholder="Search here"/>
+													<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+												</form>
+											</div>
+											<!--/ End Search Form -->
+										</div>
+										<!--/ End Right Bar -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--/ End Header -->
+{% endblock %}
+        {% block content %}
+			<!-- Hero Slider -->
+			<section class="hero-slider style1">
+				<div class="home-slider">
+					<!-- Single Slider -->
+					<div class="single-slider" style="background-image:url('{{ asset('img/s.jpg')}}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7 col-md-8 col-12">
+									<div class="welcome-text">
+										<div class="hero-text">
+											<h4>GLOBAL MANAGEMENT AND SOFTWARE CONSULTING SARL</h4>
+											<h1>GERER C’EST ASSURER L’AVENIR…</h1>
+											<div class="p-text">
+												<p> GLOBAL MANAGEMENT AND SOFTWARE CONSULTING SARL Vous offre Assistance comptable, Fiscale, Douanière et Financière.
+												</p>
+											</div>
+											<div class="button">
+												<a href="#nous" class="bizwheel-btn theme-2 effect">Qui Sommes-Nous?</a>
+												<a href="#contact" class="bizwheel-btn theme-1 effect">Nous Joindre</a>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+					<!-- Single Slider -->
+					<div class="single-slider" style="background-image:url('{{ asset('img/f2.png')}}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7 col-md-8 col-12">
+									<div class="welcome-text">
+										<div class="hero-text">
+											<h4>GLOBAL MANAGEMENT AND SOFTWARE CONSULTING SARL</h4>
+											<h1>GERER C’EST ASSURER L’AVENIR…</h1>
+											<div class="p-text">
+												<p>GMSC SARL con&ccediloit vos logiciels et vos prodiciels de gestion</p>
+											</div>
+											<div class="button">
+												<a href="#contact" class="bizwheel-btn theme-1 effect">Nous Joindre</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+					<!-- Single Slider -->
+					<div class="single-slider" style="background-image:url('{{ asset('img/s3.jpg')}}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7 col-md-8 col-12">
+									<div class="welcome-text">
+										<div class="hero-text">
+											<h4>GLOBAL MANAGEMENT AND SOFTWARE CONSULTING SARL</h4>
+											<h1>GERER C’EST ASSURER L’AVENIR…</h1>
+											<div class="p-text">
+												<p>GMSC SARL monte vos projets</p>
+											</div>
+											<div class="button">
+												<a href="#contact" class="bizwheel-btn theme-2 effect">Nous Joindre</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+					<!-- Single Slider -->
+					<div class="single-slider" style="background-image:url('{{ asset('img/s4.jpg')}}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7 col-md-8 col-12">
+									<div class="welcome-text">
+										<div class="hero-text">
+											<h4>GLOBAL MANAGEMENT AND SOFTWARE CONSULTING SARL</h4>
+											<h1>GERER C’EST ASSURER L’AVENIR…</h1>
+											<div class="p-text">
+												<p>GMSC SARL vous offre des formations en gestion et en informatique</p>
+											</div>
+											<div class="button">
+												<a href="#contact" class="bizwheel-btn theme-2 effect">Nous Joindre</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+				</div>
+			</section>
+			<!--/ End Hero Slider -->
+
+			<!-- Features Area -->
+			<section class="features-area section-bg" id="service">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<!-- Single Feature -->
+							<div class="single-feature">
+								<div class="icon-head"><i class="fa fa-podcast"></i></div>
+								<h4><a href="#contact">Assistance</a></h4>
+								<p>Nous offrons des services d'assistance comptable, Fiscale, Douanière et Financière.</p>
+								<div class="button">
+									<a href="#contact" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-right"></i>En Savoir Plus</a>
+								</div>
+							</div>
+							<!--/ End Single Feature -->
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<!-- Single Feature -->
+							<div class="single-feature">
+								<div class="icon-head"><i class="fa fa-podcast"></i></div>
+								<h4><a href="#contact">Conception</a></h4>
+								<p>Nous offrons des services de Conception des logiciels et progiciels de gestion.</p>
+								<div class="button">
+									<a href="#contact" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-right"></i>En Savoir Plus</a>
+								</div>
+							</div>
+							<!--/ End Single Feature -->
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<!-- Single Feature -->
+							<div class="single-feature">
+								<div class="icon-head"><i class="fa fa-podcast"></i></div>
+								<h4><a href="#contact">Projet</a></h4>
+								<p>Nous vous accompagnons dans le montage de vos projets quelqu'en soit le domaine.</p>
+								<div class="button">
+									<a href="#contact" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-right"></i>En Savoir Plus</a>
+								</div>
+							</div>
+							<!--/ End Single Feature -->
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<!-- Single Feature -->
+							<div class="single-feature">
+								<div class="icon-head"><i class="fa fa-podcast"></i></div>
+								<h4><a href="#contact">Formation</a></h4>
+								<p>Nous offrons des formations théoriques et pratiques en gestion et en informatique.</p>
+								<div class="button">
+									<a href="#contact" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-right"></i>En Savoir Plus</a>
+								</div>
+							</div>
+							<!--/ End Single Feature -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Features Area -->
+
+			<!-- Call To Action -->
+			<section class="call-action overlay" style="background-image:url('https://via.placeholder.com/1500x300')">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-9 col-12">
+							<div class="call-inner">
+								<h2>GERER C’EST ASSURER L’AVENIR…</h2>
+								<p>Nous mettons à votre disposition notre catalogue d'offres de formation que vous pouvez T&eacutel&eacutecharger </p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-12">
+							<div class="button">
+								<a class="bizwheel-btn" href="{{ asset('img/module-formation.pdf')}}" download >T&eacutel&eacutecharger</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Call to action -->
+			<section class="features-area section-bg" id="equipe">
+				<!-- Our Team -->
+				<div class="site-section" id="our-team-section">
+					<div class="container">
+						<div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
+							<div class="col-7 text-center  mb-5">
+								<h2 class="section-title">Notre Equipe</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+								<div class="person">
+									<div class="bio-img">
+										<figure>
+											<img src="{{ asset('img/luther.jpg')}}" alt="Image" class="img-fluid">
+										</figure>
+										<div class="social">
+											<ul class="social-icons">
+												<li><a href="https://www.facebook.com/luther.noubissi"><i class="fa fa-facebook"></i></a></li>
+												<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<h2 class="text-black h1">Mr. TALLA NOUBISSI Rodolphe Luther</h2>
+									<span class="sub-title d-block mb-3">Charg&eacute des op&eacuterations fiscales et douani&egraveres</span>
+									<p>Directeur Administratif et Financier du GROUPE AMI : <br>
+										- ASSISTANCE MARITIME INTERNATIONALE<br>
+										- AMI IMMOBILIER <br>
+										- AFRICA LOGISTIQUE CAMEROON <br>
+										- BOSTON PLAZA <br>
+										Contrôleur de Gestion de 2011 à 2015 de ASSISTANCE MARITIME INTERNATIONALE.
+										CERTIFI&Eacute INTEC EN AUDIT ET CONTRÔLE LÉGAL DES COMPTES.<br><br>
+										MASTER EN SCIENCE DE GESTION OPTION FINANCE ET COMPTABILITÉ.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+								<div class="person">
+									<div class="bio-img">
+										<figure>
+											<img src="{{ asset('img/patron.png')}}" alt="Image" class="img-fluid">
+										</figure>
+										<div class="social">
+											<ul class="social-icons">
+												<li><a href="https://www.facebook.com/luther.noubissi"><i class="fa fa-facebook"></i></a></li>
+												<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<h2 class="text-black h1">Mr. TCHATE</h2>
+									<span class="sub-title d-block mb-3">EXPERT COMPTABLE</span>
+									<p>INSCRIT AU TABLEAU DE L'ORDRE (ONECCA) sur le Numéro  157 ECP..</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+								<div class="person">
+									<div class="bio-img">
+										<figure>
+											<img src="{{ asset('img/EFON.jpg')}}" alt="Image" class="img-fluid">
+										</figure>
+										<div class="social">
+											<ul class="social-icons">
+												<li><a href="https://www.facebook.com/luther.noubissi"><i class="fa fa-facebook"></i></a></li>
+												<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<h2 class="text-black h1">Mr. EFON FRANKLIN EKANGWO</h2>
+									<span class="sub-title d-block mb-3">Charg&eacute des op&eacuterations d'audit et finance</span>
+									<p>-DESS en gestion financière et bancaire<br>
+										-Maitrise en science de gestion option comptabilit&eacute et finance<br>
+										-Professeur de lycée d'enseignement technique<br>
+										-CERTIFI&Eacute en audit et contrôle légal des comtes l'INTEC<br>
+										-CERTIFI&Eacute en Finance de l'INTEC<br>
+										-CERTIFI&Eacute en Gestion des collectivites teritoriales  décentralisée de l'INTEC<br>
+										-CERTIFI&Eacute en gestion des associations de l'INTEC<br>
+										-DSCG en cours de l'expertise comptable Français<br>
+										-DCG de l'expertise comptable Français.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ Our Team -->
+			<!-- Contact Us -->
+			<section class="contact-us section-space" id="contact">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7 col-md-7 col-12">
+							<!-- Contact Form -->
+							<div class="contact-form-area m-top-30">
+								<h4>prendre contact</h4>
+								{% set flashBag_notices = app.session.flashBag.get('notice') %}
+								{% if flashBag_notices is not empty %}
+									<ul class="msg">
+										{% for notice in flashBag_notices %}
+											<li>{{ notice }}<i class="fa fa-check" style="color:#449A09"></i></li>
+										{% endfor %}
+									</ul>
+								{% endif %}
+								{{ form_start(form) }}
+								<div class="row">
+
+									<div class="col-lg-6 col-md-6 col-12">
+										<div class="form-group">
+											<div class="icon"><i class="fa fa-envelope"></i></div>
+											{{ form_widget(form.adresse) }}
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-12">
+										<div class="form-group">
+											<div class="icon"><i class="fa fa-tag"></i></div>
+											{{ form_widget(form.sujet) }}
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group textarea">
+											<div class="icon"><i class="fa fa-pencil"></i></div>
+											{{ form_widget(form.message) }}
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group button">
+											<button type="submit" class="bizwheel-btn theme-2">Envoyer</button>
+										</div>
+									</div>
+								</div>
+								{{ form_end(form) }}
+							</div>
+							<!--/ End contact Form -->
+						</div>
+						<div class="col-lg-5 col-md-5 col-12">
+							<div class="contact-box-main m-top-30">
+								<div class="contact-title">
+									<h2>Nous Contacter</h2>
+								</div>
+								<!-- Single Contact -->
+								<div class="single-contact-box">
+									<div class="c-icon"><i class="fa fa-clock-o"></i></div>
+									<div class="c-text">
+										<h4>Ouverture</h4>
+										<p>Lundi - Samedi<br>08h - 17h (Tous les jours)</p>
+									</div>
+								</div>
+								<!--/ End Single Contact -->
+								<!-- Single Contact -->
+								<div class="single-contact-box">
+									<div class="c-icon"><i class="fa fa-phone"></i></div>
+									<div class="c-text">
+										<h4>Appelez-nous</h4>
+										<p>Tel: +(237) 233 47 88 14 / 696 30 14 24 / 679 65      97 35</p>
+									</div>
+								</div>
+								<div class="single-contact-box">
+									<div class="c-icon"><a href="https://www.google.com/maps/place/4%C2%B005'25.0%22N+9%C2%B044'47.6%22E/@4.0902831,9.7443669,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d4.090272!4d9.746553"><i class="fa fa-map-marker"></i></a></div>
+									<div class="c-text">
+										<h4>Localisation</h4>
+										<p>Bonamoussadi-Douala-Camerpoun</p>
+									</div>
+								</div>
+								<!--/ End Single Contact -->
+								<!-- Single Contact -->
+								<div class="single-contact-box">
+									<div class="c-icon"><i class="fa fa-envelope-o"></i></div>
+									<div class="c-text">
+										<h4>Envoyez-nous un courriel</h4>
+										<p>contact@gmsc-sarl.com</p>
+									</div>
+								</div>
+								<!--/ End Single Contact -->
+								<div class="button">
+									<a href="#" class="bizwheel-btn theme-1">&Agrave propos de nous<i class="fa fa-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Contact Us -->
+
+			<!-- Client Area -->
+			<div class="clients section-bg" id="temoin">
+				<div class="container">
+					<div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
+						<div class="col-7 text-center  mb-5">
+							<h2 class="section-title">Ils nous font confiance :</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="partner-slider">
+								<!-- Single client -->
+								<div class="single-slider">
+									<div class="single-client">
+										<a href="#" target="_blank"><img src="{{ asset('img/client/bollore.png')}}" alt="#"></a>
+									</div>
+								</div>
+								<!--/ End Single client -->
+								<!-- Single client -->
+								<div class="single-slider">
+									<div class="single-client">
+										<a href="#" target="_blank"><img src="{{ asset('img/client/ami.jpg')}}" alt="#"></a>
+									</div>
+								</div>
+								<!--/ End Single client -->
+								<!-- Single client -->
+								<div class="single-slider">
+									<div class="single-client">
+										<a href="#" target="_blank"><img src="{{ asset('img/client/amisa.png')}}" alt="#"></a>
+									</div>
+								</div>
+								<!--/ End Single client -->
+								<!-- Single client -->
+								<div class="single-slider">
+									<div class="single-client">
+										<a href="#" target="_blank"><img src="{{ asset('img/client/negoce.png')}}" alt="#"></a>
+									</div>
+								</div>
+								<!--/ End Single client -->
+								<!-- Single client -->
+								<div class="single-slider">
+									<div class="single-client">
+										<a href="#" target="_blank"><img src="{{ asset('img/client/Laval.png')}}" alt="#"></a>
+									</div>
+								</div>
+								<!--/ End Single client -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Client Area -->
+		{% endblock %}
+{% block footer %}
+	<!-- Footer -->
+	<footer class="footer" style="background-image:url('{{ asset('img/map.png')}}')">
+		<!-- Footer Top -->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Footer About -->
+						<div class="single-widget footer-about widget">
+							<div class="logo">
+								<div class="img-logo">
+									<a class="logo" href="#home">
+										<img class="img-responsive" src="{{ asset('img/b.png')}}" alt="logo">
+									</a>
+								</div>
+							</div>
+							<div class="footer-widget-about-description">
+								<p>GLOBAL MANAGEMENT AND SOFTWARE CONSULTING SARL</b>
+									Nous G&eacuterons et assurons votre avenir...</p>
+							</div>
+							<div class="social">
+								<!-- Social Icons -->
+								<ul class="social-icons">
+									<li><a class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a class="linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								</ul>
+							</div>
+							<div class="button"><a href="#" class="bizwheel-btn">A Propos De Nous</a></div>
+						</div>
+						<!--/ End Footer About -->
+					</div>
+					<div class="col-lg-2 col-md-6 col-12">
+						<!-- Footer Links -->
+						<div class="single-widget f-link widget">
+							<h3 class="widget-title">Entreprise</h3>
+							<ul>
+								<li><a href="#">Formations</a></li>
+								<li><a href="#">Conception</a></li>
+								<li><a href="#">Assistance</a></li>
+								<li><a href="#">T&eacutemoignage</a></li>
+								<li><a href="#">Contactez-nous</a></li>
+							</ul>
+						</div>
+						<!--/ End Footer Links -->
+					</div>
+
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Footer Contact -->
+						<div class="single-widget footer_contact widget">
+							<h3 class="widget-title">Contact</h3>
+							<ul class="address-widget-list">
+								<li class="footer-mobile-number"><i class="fa fa-phone"></i>+(237) 233 47 88 14 / 696 30 14 24 / 679 65 97 35</li>
+								<li class="footer-mobile-number"><i class="fa fa-envelope"></i>gmscsarl@yahoo.com</li>
+								<li class="footer-mobile-number"><i class="fa fa-podcast"></i>B.P.: 7198 Douala</li>
+								<li class="footer-mobile-number"><a href="https://www.google.com/maps/place/4%C2%B005'25.0%22N+9%C2%B044'47.6%22E/@4.0902831,9.7443669,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d4.090272!4d9.746553"><i class="fa fa-map-marker"></i>ICI</a></li>
+							</ul>
+						</div>
+						<!--/ End Footer Contact -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+						<!-- Footer Newsletter -->
+						<div class="footer-newsletter">
+							<form action="#" method="post" class="newsletter-area">
+								<input type="email" placeholder="Ton adresse email">
+								<button type="submit">S'inscrire</button>
+							</form>
+						</div>
+						<!--/ End Footer Newsletter -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright -->
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="copyright-content">
+							<!-- Copyright Text -->
+							<p>© Copyright <a href="#">GMSC SARL</a>.   D&eacuteveloppeur: rodricguifo@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Copyright -->
+	</footer>
+{% endblock %}
+        {% block javascripts %}
+			<!-- Jquery JS -->
+			<script src="{{ asset('js/jquery.min.js')}}"></script>
+			<script src="{{ asset('js/jquery-migrate-3.0.0.js')}}"></script>
+			<!-- Popper JS -->
+			<script src="{{ asset('js/popper.min.js')}}"></script>
+			<!-- Bootstrap JS -->
+			<script src="{{ asset('js/bootstrap.min.js')}}"></script>
+			<!-- Modernizr JS -->
+			<script src="{{ asset('js/modernizr.min.js')}}"></script>
+			<!-- ScrollUp JS -->
+			<script src="{{ asset('js/scrollup.js')}}"></script>
+			<!-- FacnyBox JS -->
+			<script src="{{ asset('js/jquery-fancybox.min.js')}}"></script>
+			<!-- Cube Portfolio JS -->
+			<script src="{{ asset('js/cubeportfolio.min.js')}}"></script>
+			<!-- Slick Nav JS -->
+			<script src="{{ asset('js/slicknav.min.js')}}"></script>
+			<!-- Slick Nav JS -->
+			<script src="{{ asset('js/slicknav.min.js')}}"></script>
+			<!-- Slick Slider JS -->
+			<script src="{{ asset('js/owl-carousel.min.js')}}"></script>
+			<!-- Easing JS -->
+			<script src="{{ asset('js/easing.js')}}"></script>
+			<!-- Magnipic Popup JS -->
+			<script src="{{ asset('js/magnific-popup.min.js')}}"></script>
+			<!-- Active JS -->
+			<script src="{{ asset('js/active.js')}}"></script>
+			<script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}"></script>
+			<script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')}}"></script>
+			<script src="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')}}"></script>
+		{% endblock %}

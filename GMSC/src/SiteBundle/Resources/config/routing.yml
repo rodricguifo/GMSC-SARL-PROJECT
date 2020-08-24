@@ -1,0 +1,6 @@
+site_homepage:
+    path:     /index
+    defaults: { _controller: SiteBundle:Default:index }
+site_sendMail:
+    path:     /sendMail
+    defaults: { _controller: SiteBundle:Site:sendMail}

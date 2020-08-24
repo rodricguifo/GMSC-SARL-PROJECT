@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <!-- Meta Tag -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='copyright' content='pavilan'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Title Tag  -->
+        <title>{% block title %}GMSC Sarl{% endblock %}</title>
+        {% block stylesheets %}
+            <!-- Favicon -->
+            <link rel="icon" type="image/b.png" href="{{ asset('img/b.png')}}">
+
+            <!-- Web Font -->
+            <link href="{{ asset('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap')}}" rel="stylesheet">
+
+            <!-- Bizwheel Plugins CSS -->
+            <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/cubeportfolio.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/font-awesome.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/magnific-popup.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/owl-carousel.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/slicknav.min.css')}}">
+
+            <!-- Bizwheel Stylesheet -->
+            <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/reset.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/style1.css')}}">
+            <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')}}">
+            <!-- Bizwheel Colors -->
+            <!--<link rel="stylesheet" href="css/skins/skin-1.css">-->
+            <!--<link rel="stylesheet" href="css/skins/skin-2.css">-->
+            <!--<link rel="stylesheet" href="css/skins/skin-3.css">-->
+            <!--<link rel="stylesheet" href="css/skins/skin-4.css">-->
+
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        {% endblock %}
+    </head >
+    <body id="bg">
+        <!-- Boxed Layout -->
+        <div id="page" class="site boxed-layout">
+
+            <!-- Preloader -->
+            <div class="preeloader">
+                <div class="preloader-spinner"></div>
+            </div>
+            <!--/ End Preloader -->
+            {% block header %}{% endblock %}
+            {% block content %}{% endblock %}
+            {% block footer %}{% endblock %}
+            {% block javascripts %}{% endblock %}
+        </div>
+    </body>
+</html>
